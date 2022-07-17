@@ -1,0 +1,17 @@
+.month-row{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.ngb-datepicker-navigation{
+    .ngb-dp-arrow{
+        display: none;
+    }
+    select[aria-label="Select month"]{
+        display: none;
+    }
+    select[aria-label="Select year"]{
+        width: 50%;
+        flex: none;
+        margin: 0 auto;
+    }
+}

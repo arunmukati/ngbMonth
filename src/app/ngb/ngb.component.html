@@ -1,0 +1,64 @@
+<!-- <ngb-datepicker class="custom-datepicker" #dp [displayMonths]="12"
+    navigation="select" [minDate]="{year: 2010, month: 1, day: 1}"
+    [maxDate]="{year: 2048, month: 12, day: 31}"> -->
+
+<div class="ngb-datepicker">
+    <div class="ngb-dp-navigation-select">
+        <select aria-label="Select year" title="Select year" class="custom-select" [(ngModel)]="currentYear" >
+            <option *ngFor="let year of yearArray"  [value]="year">{{year}}</option>
+        </select>
+    </div>
+    <div class="ngb-dp-content">
+        <div class="ngb-dp-navigation-select align-items-center">
+            <div class="ngb-dp-arrow">
+                <button type="button" (click)="navigate(-1)" aria-label="Previous month" title="Previous month"
+                    class="btn btn-link ngb-dp-arrow-btn"><span class="ngb-dp-navigation-chevron"></span></button></div>
+            <div class="month-row">
+                <div *ngFor="let month of model.months;let index=index" class="ngb-dp-day">
+                    <div class="text-primary p-1 fw-bold" [ngClass]="{'activeMonth': currentMonth==index }" >
+                        {{ngb.getMonthShortName(index+1)}}</div>
+                </div>
+            </div>
+
+            <div class="ngb-dp-arrow right"><button type="button" aria-label="Next month" (click)="navigate(1)"
+                    title="Next month" class="btn btn-link ngb-dp-arrow-btn"><span
+                        class="ngb-dp-navigation-chevron"></span></button></div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+    <div class="ngb-dp-navigation-select align-items-center">
+        <div class="ngb-dp-arrow">
+            <button type="button" (click)="navigate(-1)" aria-label="Previous month" title="Previous month"
+                class="btn btn-link ngb-dp-arrow-btn"><span class="ngb-dp-navigation-chevron"></span></button></div>
+        <div class="month-row">
+            <div *ngFor="let month of model.months;let index=index">
+                <div class="text-primary p-1 fw-bold">
+                    {{ngb.getMonthShortName(index+1)}}</div>
+            </div>
+        </div>
+
+        <div class="ngb-dp-arrow right"><button type="button" aria-label="Next month" (click)="navigate(1)"
+                title="Next month" class="btn btn-link ngb-dp-arrow-btn"><span
+                    class="ngb-dp-navigation-chevron"></span></button></div>
+    </div>
+
+</div> -->
+<!-- </ngb-datepicker> -->
